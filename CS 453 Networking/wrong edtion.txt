@@ -1,0 +1,54 @@
+//				if(current.time + current.size/buffer.transmission_rate < p.arrivalTime){
+//					remove current;
+//					cap -= current.length;
+//				}
+				
+//				if(buffer.queue.size()==0){
+//					p.headTime  = 0;
+//					p.transTime = p.headTime+(p.size/buffer.transmission_rate);
+//					buffer.queue.add(p); //add the packet to the buffer
+//					buffer.size += p.size;//increase the present size of the buffer 
+//					p.printOutput();	
+//					//buffer.queue.remove(0);
+//					
+//
+//				}
+//				else{
+//				Packet last = buffer.queue.get(buffer.queue.size()-1);
+//
+//				//if a packet comes in after the last packet in the queue has been transmitted
+//				if(p.time>=last.transTime){
+//
+//					p.headTime  = last.transTime;
+//					p.transTime = p.headTime+(p.size/buffer.transmission_rate);
+//					buffer.queue.add(p); //add the packet to the buffer 
+//					p.printOutput();
+//
+//				}
+//
+//				else if(p.time<last.transTime){
+//
+//					int i = buffer.queue.size()-1;
+//					int tempSize =0;
+//					while(buffer.queue.get(i).transTime>p.time){
+//						tempSize += buffer.queue.get(i).size;
+//						i--;
+//					}//end while
+//
+//					if((tempSize+p.size)>buffer.max_size){
+//						p.headTime  = last.transTime;
+//						p.transTime = p.headTime+(p.size/buffer.transmission_rate);
+//						buffer.queue.add(p); //add the packet to the buffer
+//						p.printOutput();
+//
+//					}
+//
+//
+//
+//				}
+//
+//				//else drop the packet
+//				else {
+//					System.out.println(p.id+","+p.size+","+p.time+","+"NA,NA");
+//				}
+//			}
